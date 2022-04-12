@@ -196,6 +196,13 @@ body {
   text-align: center;
   margin-block: 1rem;
 }
+@media only screen and (min-width: 863px) {
+  .attribution {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
 .attribution a {
   color: hsl(228deg, 45%, 44%);
 }

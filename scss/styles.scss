@@ -204,6 +204,12 @@ main {
   text-align: center;
   margin-block: 1rem;
 
+  @include breakpoint(first) {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
   a {
     color: hsl(228, 45%, 44%);
   }
