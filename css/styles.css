@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --green-hover: hsl(154, 59%, 61%);
+  --blue: hsl(248, 32%, 49%);
+  --dk-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --border-gray: #c0c0c0;
+  --box-shadow: 0px 8px 0px 0px rgba(100, 100, 100, 0.4);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  color: white;
+  background-color: var(--red);
+  background-image: url("../images/bg-intro-mobile.png");
+}
+@media only screen and (min-width: 863px) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+}
+
+@media only screen and (min-width: 863px) {
+  main {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+}
+
+.container {
+  width: min(32.5rem, 90%);
+  margin: 0 auto;
+  padding-top: 9rem;
+}
+@media only screen and (min-width: 863px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    width: min(90%, 110rem);
+    padding: 0;
+    gap: 7rem;
+  }
+}
+
+.intro-content {
+  text-align: center;
+  margin-bottom: 6.4rem;
+}
+@media only screen and (min-width: 863px) {
+  .intro-content {
+    text-align: left;
+  }
+}
+.intro-content__heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  margin-bottom: 2.4rem;
+}
+@media only screen and (min-width: 863px) {
+  .intro-content__heading {
+    font-size: 4.8rem;
+    letter-spacing: 0.5px;
+    line-height: 5.5rem;
+  }
+}
+.intro-content__desc {
+  line-height: 2.6rem;
+  font-weight: 500;
+}
+
+.intro-form__price-card {
+  text-align: center;
+  background-color: var(--blue);
+  padding: 2rem 7rem;
+  border-radius: 1rem;
+  margin-bottom: 2.4rem;
+  box-shadow: var(--box-shadow);
+}
+.intro-form__price-card span {
+  font-weight: 600;
+}
+.intro-form__form {
+  background-color: white;
+  padding: 2.4rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  box-shadow: var(--box-shadow);
+}
+@media only screen and (min-width: 863px) {
+  .intro-form__form {
+    padding: 4rem;
+  }
+}
+.intro-form__form__input-group {
+  position: relative;
+}
+.intro-form__form__input-group input {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid var(--border-gray);
+  caret-color: var(--blue);
+  color: var(--dk-blue);
+}
+.intro-form__form__input-group input:focus {
+  border: 1px solid var(--blue);
+}
+.intro-form__form__input-group img {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  right: 1rem;
+  top: 1.6rem;
+}
+.intro-form__form__input-group__error-text {
+  display: none;
+  color: var(--red);
+  font-size: 1.2rem;
+  text-align: right;
+  font-style: italic;
+}
+.intro-form__form__input-group--error img {
+  display: block;
+}
+.intro-form__form__input-group--error input {
+  border: 1px solid var(--red);
+}
+.intro-form__form__input-group--error .intro-form__form__input-group__error-text {
+  display: block;
+}
+.intro-form__form__submit-btn {
+  background-color: var(--green);
+  border: none;
+  outline: none;
+  padding: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  letter-spacing: 0.5px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  box-shadow: inset 0px -4px hsl(154deg, 59%, 41%);
+  cursor: pointer;
+  transition: box-shadow 200ms ease-out;
+}
+.intro-form__form__submit-btn:hover {
+  background-color: var(--green-hover);
+}
+.intro-form__form__submit-btn:active {
+  box-shadow: inset 0px -2px hsl(154deg, 59%, 41%);
+}
+.intro-form__form__tandc {
+  color: var(--grayish-blue);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 0 1.6rem;
+  line-height: 2.1rem;
+}
+.intro-form__form__tandc span {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-block: 1rem;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
